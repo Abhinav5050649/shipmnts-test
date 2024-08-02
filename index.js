@@ -2,9 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const connect = require('./dbConfig/dbConfig');
+const adminInit = require("./firebaseInit/adminInit");
+
 require('dotenv').config();
 
 connect();
+adminInit();
 
 app.use(express.json());
 app.use(cors());
@@ -19,6 +22,6 @@ app.get("/", async(req, res) => {
     }
 });
 
-app.listen(3000, ()=> {
+app.listen(3000, () => {
     console.log("Listening on PORT 3000!");
 });
