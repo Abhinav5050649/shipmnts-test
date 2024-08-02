@@ -7,7 +7,7 @@ const mailSchema = new Schema({
     freqDay: { type: Number },
     subject: { type: String, required: true },
     body: { type: String, required: true },
-    attachments: [String],
+    attachments: [Object],
     cronJobId: { type: Schema.Types.ObjectId, ref: "cronJob" }
 });
 

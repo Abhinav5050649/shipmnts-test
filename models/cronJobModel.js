@@ -10,7 +10,7 @@ const cronJobSchema = new Schema({
     freqDay: { type: Number},
     subject: { type: String, required: true },
     body: { type: String, required: true },
-    attachments: [String]
+    attachments: [Object]
 });
 
 const cronJob = new mongoose.model('Cron', cronJobSchema);
