@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+import connect from './dbConfig/dbConfig';
+
+connect();
 
 app.use(express.json());
 app.use(cors());
