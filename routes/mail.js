@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
+require('dotenv').config();
 
-router.get(`/scheduled-emails/${id}`, async(req, res) => {
+router.get(`/scheduled-emails/:id`, async(req, res) => {
     try {
         
     } catch (error) {
@@ -25,7 +26,7 @@ router.post(`/schedule-email`, async(req, res) => {
     }
 });
 
-router.delete(`/scheduled-emails/${id}`, async(req, res) => {
+router.delete(`/scheduled-emails/:id`, async(req, res) => {
     try {
         
     } catch (error) {
